@@ -23,7 +23,7 @@ const SvgWrapper = ({ SVG, className, ...rest }) => (
 )
 
 
-export default function MuneebKhan({ }) {
+export default function MuneebKhan({ animate = true }) {
   const ref = useRef()
 
   const [mount, handleMount] = useState(false);
@@ -42,8 +42,24 @@ export default function MuneebKhan({ }) {
     handleMount(isInViewport())
   }
 
+  // respect prefers-reduced-motion and allow disabling via prop
+  const [reducedMotion, setReducedMotion] = useState(false)
+  useEffect(() => {
+    try {
+      const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
+      const handler = () => setReducedMotion(mq.matches)
+      handler()
+      mq.addEventListener ? mq.addEventListener('change', handler) : mq.addListener(handler)
+      return () => mq.removeEventListener ? mq.removeEventListener('change', handler) : mq.removeListener(handler)
+    } catch (e) {
+      // ignore on older browsers
+    }
+  }, [])
+
+  const noAnimate = !animate || reducedMotion
+
   return (
-    <div ref={ref} className={`mk-muneeb-khan ${mount ? 'mk-muneeb-khan-visible' : ''}`}>
+    <div ref={ref} className={`mk-muneeb-khan ${mount ? 'mk-muneeb-khan-visible' : ''} ${noAnimate ? 'mk-muneeb-khan-no-animate' : ''}`}>
       <SvgWrapper
         className="mk_svg_M"
         SVG={M}

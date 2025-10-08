@@ -3,7 +3,6 @@ import Contact from "../views/Contact";
 import FullPageScroll from "../components/FullPageScroll";
 // import Graphis from "../views/Graphis";
 import Header from "../components/Header";
-import MapsContribution from "../views/MapsContribution";
 import MySelf from "../views/MySelf";
 import Outer from "../views/Outer";
 import Projects from "../views/Projects";
@@ -11,7 +10,7 @@ import Reviews from "../views/Reviews";
 import SideElements from "../components/SideElements";
 import TopScrolledBar from "../components/TopScrolledBar";
 import Works from "../views/Works";
-import { contact, graphics, header, mapsContribution, mySelf, outer, projects, reviews, works } from "../utils";
+import { contact, graphics, header, mySelf, outer, projects, reviews, works } from "../utils";
 import sideElements from "../utils/sideElements";
 import Cursor from "../components/Cursor";
 import PreLoader from "../components/PreLoader";
@@ -67,9 +66,9 @@ export default function Home() {
           <Certifications data={certifications} />
         </ViewElement>
 
-        <ViewElement id="contributions">
+        {/* <ViewElement id="contributions">
           <MapsContribution data={mapsContribution} />
-        </ViewElement>
+        </ViewElement> */}
 
         <ViewElement id="contact">
           <Contact data={contact} />

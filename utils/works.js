@@ -1,26 +1,20 @@
 const works = {
-    heading: 'My Work Experiences',
+    heading: 'My Experiences',
     experiences: [
         {
-            company: 'Digital Marknadsplan',
-            role: 'Full Stack Developer',
-            duration: 'Remote-Job | May 2020 - Present',
+            company: 'Byte Bash Blitz',
+            role: 'Basher',
+            duration: 'Aug 2025 - Present',
             points: [
-                `A Swedish based Company hired my developers crew where we gave the
-    most part of our development from just React till the road of Nodejs,
-    GraphQL, Apollo and many more techs.`,
+                `Byte Bash Blitz is a student community at Stella Mary’s College of Engineering that helps learners enhance their skills through hands-on experience and exposure to Industry 4.0 technologies such as AI, IoT, Cloud, and Data Science. As an active member, I engage in various workshops, projects, and collaborative activities that strengthen both my technical and teamwork abilities.`,
             ],
         },
         {
-            company: 'Daily Cart',
-            role: 'Co Founder',
+            company: '',
+            role: 'Student',
             duration: 'Onsite | Jun 2019 - Jun 2021',
             points: [
-                `My First startup in which we developed Daily Cart App, My Role was
-                developing whole technical side like Web, Mobile Android/IOS, server,
-                And there were many Applications such as User Mobile App, Vendor App,
-                Rider App, User web, Admin Panel, So by hiring one more Developer I
-                made those all things done in one n half year.`,
+                `Finished schooling in Hindu vidyalaya and Currently doing B.E in stella mary's college of Engineering.`,
             ],
         },
         {

@@ -2,17 +2,17 @@ import { openLink } from "./methods"
 
 const outer = {
     title1:  `G'day, I'm`,
-    title2: 'Muneeb Khan,',
+    title2: 'Anitus,',
     decrypTexts: [
         'A Software Engineer',
         'A Full Stack Developer',
         'I build things for the web',
-        // 'A Traveler',
+        'A Traveler',
     ],
-    desciption: `A dedicated and disciplined Full Stack engineer who love to create things for internet, having more than 4 years of field experience I've delivered projects to many happy clients over globe.`,
+    desciption: `A dedicated and disciplined Computer Science and Engineering student who loves to create things for the internet. Having more than 4 years of field experience, I've delivered projects to many happy clients across the globe.`,
     button: {
         label: 'Contact me!',
-        onClick: () => openLink('mailto:muneebwasikhan@gmail.com?subject=Hello')
+        onClick: () => openLink('mailto:anitus2006ajr@gmail.com?subject=Hello')
     }
 }
 
