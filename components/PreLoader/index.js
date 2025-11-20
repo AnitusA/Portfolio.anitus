@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import MuneebKhan from '../MuneebKhan';
+import AnitusIntro from '../AnitusIntro';
 
 const PreLoader = () => {
     const [loader, handleLoader] = useState(true);
@@ -15,7 +15,7 @@ const PreLoader = () => {
         <div className={`mk-pre-loader ${loader ? 'mk-pre-loader-enabled' : 'mk-pre-loader-disabled'}`}>
             <div className='mk-pre-loader-boarder' />
             <div className='mk-pre-loader-container'>
-                <MuneebKhan />
+                <AnitusIntro />
             </div>
         </div>
     )

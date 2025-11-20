@@ -1,5 +1,5 @@
 {
-  "name": "portfolio",
+  "name": "anitus-a-portfolio",
   "version": "0.1.1",
   "private": true,
   "scripts": {
@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formspree/react": "^3.0.0",
     "aos": "^2.3.4",
     "bootstrap": "^5.2.0",
     "next": "12.2.3",

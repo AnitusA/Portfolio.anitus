@@ -1,55 +1,25 @@
-const reviews = {
-    heading:  `Some Reviews`,
+﻿const reviews = {
+    heading: "My Portfolio Contributions",
     list: [
         {
-            clinet: 'Adrian',
-            via: 'Fiver',
-            reivew: 'Flawless delivery!',
+            clinet: "Registration System",
+            via: "Fullstack Developer",
+            reivew: "Built a dynamic dashboard interface with advanced filtering capabilities to visualize and interact with structured data. High Scalability implementation.",
         },
         {
-            clinet: 'Adrian',
-            via: 'Fiver',
-            reivew: 'Muneeb is a great product leader and developer. He helped me accelerate my development by collaborating with many engineers and helped me build my app. I look forward to working with Muneeb again',
+            clinet: "Classroom Management System",
+            via: "Fullstack Developer",
+            reivew: "Developed and implemented the complete student-side interface for a real-time classroom management platform. This included building pages for student profiles, assignment tracking, resource access, and interactive communication tools.",
         },
         {
-            clinet: 'Adrian',
-            via: 'Fiver',
-            reivew: 'This guy is awesome! He works hard and always with the best quality. He did great on our project. I highly recommend him!',
+            clinet: "Attendance Hall of Fame",
+            via: "Fullstack Developer",
+            reivew: "Implemented a dynamic Attendance Hall of Fame module for the community dashboard, designed to showcase top contributors based on attendance metrics. The module is currently inactive due to backend integration issues.",
         },
         {
-            clinet: 'Adrian',
-            via: 'Fiver',
-            reivew: 'The freelancer is absolutely expert, he done what I need with perfec skills. I’m going to work with him again. Thank you',
-        },
-        {
-            clinet: 'Adrian',
-            via: 'Fiver',
-            reivew: 'I’m glad working with him, definitely you won’t regret it. Amazing job',
-        },
-        {
-            clinet: 'Adrian',
-            via: 'Fiver',
-            reivew: 'Great guy. Works hard and delivers quality.',
-        },
-        {
-            clinet: 'Adrian',
-            via: 'Fiver',
-            reivew: 'Another top shelf delivery from Muneeb. Happy again, as expected.',
-        },
-        {
-            clinet: 'Adrian',
-            via: 'Fiver',
-            reivew: '10/10, would definitely recommend this dude for all your app programming needs.',
-        },
-        {
-            clinet: 'Adrian',
-            via: 'Fiver',
-            reivew: 'I can tell soon its really done ...but till now i think its really good',
-        },
-        {
-            clinet: 'Adrian',
-            via: 'Fiver',
-            reivew: 'very helpful, and works hard to make sure things are done. Good developer.',
+            clinet: "Bash X code",
+            via: "Tester",
+            reivew: "Focusing on identifying bugs, testing challenge functionality, and ensuring a seamless user experience. Verified question logic, input/output validation, and platform stability under contest conditions.",
         },
     ]
 }

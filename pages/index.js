@@ -5,6 +5,7 @@ import FullPageScroll from "../components/FullPageScroll";
 import Header from "../components/Header";
 import MySelf from "../views/MySelf";
 import Outer from "../views/Outer";
+import AnitusAjr from "../components/AnitusAjr";
 import Projects from "../views/Projects";
 import Reviews from "../views/Reviews";
 import SideElements from "../components/SideElements";
@@ -14,8 +15,8 @@ import { contact, graphics, header, mySelf, outer, projects, reviews, works } fr
 import sideElements from "../utils/sideElements";
 import Cursor from "../components/Cursor";
 import PreLoader from "../components/PreLoader";
-import Certifications from "../views/Certifications";
-import certifications from "../utils/certifications";
+// import Certifications from "../views/Certifications";
+// import certifications from "../utils/certifications";
 import WaterMark from "../components/WaterMark";
 
 const ViewElement = ({ children, id }) => (
@@ -40,6 +41,8 @@ export default function Home() {
 
         <ViewElement id="home">
           <Outer data={outer} />
+          {/* Anitus Ajr entrance mark (animated) */}
+          <AnitusAjr />
         </ViewElement>
 
         <ViewElement id="my-self">
@@ -62,9 +65,9 @@ export default function Home() {
           <Graphis data={graphics} />
         </ViewElement> */}
 
-        <ViewElement id="certifications">
+        {/* <ViewElement id="certifications">
           <Certifications data={certifications} />
-        </ViewElement>
+        </ViewElement> */}
 
         {/* <ViewElement id="contributions">
           <MapsContribution data={mapsContribution} />

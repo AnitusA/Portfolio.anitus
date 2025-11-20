@@ -4,8 +4,8 @@ import { openLink, scrollTo } from "./methods";
 const header = {
     menus: [
         { title: 'Home', id: 'home' },
-        { title: 'My Selft', id: 'my-self' },
-        { title: 'Experience', id: 'experience' },
+        { title: 'About Me', id: 'my-self' },
+        { title: 'My Journey', id: 'experience' },
         { title: 'My Work', id: 'my-work' },
         { title: 'Reviews', id: 'reviews' },
         { title: 'Certifications', id: 'certifications' },
@@ -14,10 +14,10 @@ const header = {
     ],
     rightBtn: {
         label: 'Curriculum Vitae | CV',
-        onClick: () => openLink('assets/cv.pdf')
+        onClick: () => openLink('https://drive.google.com/file/d/1G42PghAF-i9Y8hq5LdpG_0DEbMC79-Dv/view?usp=sharing')
     },
     logo: {
-        src: '/assets/photo-logo.png',
+        src: '/assets/profile2.png',
         alt: 'muneebwasikhan'
     },
     handleIconClick: () => scrollTo('home'),

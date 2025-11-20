@@ -1,0 +1,530 @@
+@import './theme.scss';
+
+// Modern animation timing - smooth and professional
+$modern-ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$modern-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.35);
+
+.mk-anitus-intro-modern {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 1000ms $modern-ease;
+    overflow: hidden;
+    perspective: 1000px;
+
+    // Modern geometric background
+    .modern-background-grid {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        z-index: -2;
+        opacity: 0;
+        transition: opacity 1s ease-in-out 0.5s;
+
+        .grid-line {
+            position: absolute;
+            background: linear-gradient(90deg, transparent 0%, rgba($themeColor4, 0.1) 50%, transparent 100%);
+            opacity: 0;
+            animation: grid-line-appear 2s ease-in-out infinite;
+
+            &.grid-line-1 {
+                top: 20%;
+                left: 0;
+                right: 0;
+                height: 1px;
+                animation-delay: 0.5s;
+            }
+            &.grid-line-2 {
+                top: 0;
+                bottom: 0;
+                left: 30%;
+                width: 1px;
+                background: linear-gradient(0deg, transparent 0%, rgba($themeColor4, 0.1) 50%, transparent 100%);
+                animation-delay: 1s;
+            }
+            &.grid-line-3 {
+                bottom: 30%;
+                left: 0;
+                right: 0;
+                height: 1px;
+                animation-delay: 1.5s;
+            }
+        }
+
+        .grid-dot {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: $themeColor4;
+            border-radius: 50%;
+            opacity: 0;
+            animation: grid-dot-pulse 3s ease-in-out infinite;
+
+            &.grid-dot-1 {
+                top: 20%;
+                left: 30%;
+                animation-delay: 2s;
+            }
+            &.grid-dot-2 {
+                bottom: 30%;
+                right: 25%;
+                animation-delay: 2.5s;
+            }
+            &.grid-dot-3 {
+                top: 60%;
+                left: 70%;
+                animation-delay: 3s;
+            }
+        }
+    }
+
+    // Letters container with modern flex layout
+    .letters-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        z-index: 1;
+    }
+
+    // Modern glow overlay
+    .modern-glow-overlay {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300px;
+        height: 300px;
+        background: radial-gradient(circle, rgba($themeColor4, 0.1) 0%, transparent 70%);
+        border-radius: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        transition: transform 1.5s $modern-ease, opacity 1.5s ease;
+        opacity: 0;
+        z-index: -1;
+        filter: blur(20px);
+    }
+
+    .mk-anitus-intro-parallax {
+        // Start visible by default
+        transform: translateY(0) rotateX(0deg) scale(1);
+        opacity: 1;
+        width: 90px;
+        height: 90px;
+        position: relative;
+        will-change: transform, opacity;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 800ms $modern-bounce;
+
+        .letter-svg {
+            width: 100%;
+            height: 100%;
+            color: $themeColor3;
+            filter: drop-shadow(0 0 15px rgba($themeColor4, 0.2));
+            transition: all 600ms ease;
+
+            .letter-path {
+                stroke: $themeColor3; // Fallback color
+                stroke-dasharray: 0; // No dash animation initially
+                stroke-dashoffset: 0;
+                opacity: 1;
+                animation: modern-draw-path 2s $modern-ease forwards;
+            }
+
+            .letter-accent {
+                fill: $themeColor4; // Fallback color
+                opacity: 1;
+                transform: scale(1);
+                animation: accent-appear 1s $modern-bounce forwards;
+            }
+
+            &.letter-s-special {
+                .s-path {
+                    stroke: $themeColor3; // Same as other letters
+                    stroke-dasharray: 0;
+                    stroke-dashoffset: 0;
+                    opacity: 1;
+                    animation: s-special-draw 2.5s $modern-ease forwards;
+                }
+                
+                .s-accent-1, .s-accent-2, .s-accent-3 { 
+                    fill: $themeColor4; // Same as other letters
+                    opacity: 1;
+                    transform: scale(1);
+                }
+                .s-accent-1 { animation-delay: 0.5s; }
+                .s-accent-2 { animation-delay: 1s; }
+                .s-accent-3 { animation-delay: 1.5s; }
+            }
+        }
+    }
+
+    // Staggered entrance timing
+    .mk_svg_A {
+        transition-delay: 0ms;
+        .letter-path { animation-delay: 0.2s; }
+        .letter-accent { animation-delay: 0.8s; }
+    }
+    .mk_svg_N {
+        transition-delay: 150ms;
+        .letter-path { animation-delay: 0.4s; }
+        .letter-accent { animation-delay: 1s; }
+    }
+    .mk_svg_I {
+        transition-delay: 300ms;
+        .letter-path { animation-delay: 0.6s; }
+        .letter-accent { animation-delay: 1.2s; }
+    }
+    .mk_svg_T {
+        transition-delay: 450ms;
+        .letter-path { animation-delay: 0.8s; }
+        .letter-accent { animation-delay: 1.4s; }
+    }
+    .mk_svg_U {
+        transition-delay: 600ms;
+        .letter-path { animation-delay: 1s; }
+        .letter-accent { animation-delay: 1.6s; }
+    }
+    .mk_svg_S {
+        transition-delay: 750ms;
+        .s-path { animation-delay: 1.2s; }
+    }
+}
+
+// Modern visible state
+.mk-anitus-intro-visible {
+    .modern-background-grid {
+        opacity: 1;
+    }
+
+    .mk-anitus-intro-parallax {
+        transform: translateY(0) rotateX(0deg) scale(1);
+        opacity: 1;
+    }
+
+    .modern-glow-overlay {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+// Modern wave animation state
+.mk-anitus-modern-wave {
+    .mk-anitus-intro-parallax {
+        .letter-svg {
+            filter: drop-shadow(0 0 25px rgba($themeColor4, 0.4));
+            animation: modern-letter-float 4s ease-in-out infinite;
+            
+            .letter-accent {
+                animation: accent-pulse 2s ease-in-out infinite;
+            }
+        }
+    }
+
+    .mk_svg_A { animation-delay: 0s; }
+    .mk_svg_N { animation-delay: 0.2s; }
+    .mk_svg_I { animation-delay: 0.4s; }
+    .mk_svg_T { animation-delay: 0.6s; }
+    .mk_svg_U { animation-delay: 0.8s; }
+    .mk_svg_S { animation-delay: 1s; }
+}
+
+// Final reveal state with synchronized effects
+.mk-anitus-final-reveal {
+    .letters-container {
+        animation: container-breathe 3s ease-in-out infinite;
+    }
+
+    .mk-anitus-intro-parallax .letter-svg {
+        filter: drop-shadow(0 0 30px rgba($themeColor4, 0.6)) drop-shadow(0 0 50px rgba(#00ff88, 0.3));
+        
+        .letter-path {
+            animation: modern-glow-pulse 2s ease-in-out infinite alternate;
+        }
+        
+        .letter-accent {
+            animation: accent-final-glow 2.5s ease-in-out infinite;
+        }
+    }
+
+    .mk_svg_S .letter-svg {
+        filter: drop-shadow(0 0 35px rgba($themeColor4, 0.8)) drop-shadow(0 0 60px rgba($themeColor4, 0.5));
+        
+        .s-accent-1, .s-accent-2, .s-accent-3 {
+            animation: s-special-final 2s ease-in-out infinite;
+        }
+    }
+
+    .modern-glow-overlay {
+        animation: overlay-pulse 4s ease-in-out infinite;
+    }
+}
+
+// Modern keyframe animations
+@keyframes modern-draw-path {
+    0% {
+        stroke-dashoffset: 300;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes s-special-draw {
+    0% {
+        stroke-dashoffset: 400;
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes accent-appear {
+    0% {
+        opacity: 0;
+        transform: scale(0) rotate(180deg);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.3) rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes modern-letter-float {
+    0%, 100% {
+        transform: translateY(0) rotateZ(0deg);
+    }
+    25% {
+        transform: translateY(-8px) rotateZ(1deg);
+    }
+    50% {
+        transform: translateY(-4px) rotateZ(0deg);
+    }
+    75% {
+        transform: translateY(-12px) rotateZ(-1deg);
+    }
+}
+
+@keyframes accent-pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.4);
+        opacity: 0.8;
+    }
+}
+
+@keyframes container-breathe {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+@keyframes modern-glow-pulse {
+    0% {
+        stroke-width: 6;
+        opacity: 1;
+    }
+    100% {
+        stroke-width: 8;
+        opacity: 0.8;
+    }
+}
+
+@keyframes accent-final-glow {
+    0%, 100% {
+        transform: scale(1);
+        filter: brightness(1);
+    }
+    50% {
+        transform: scale(1.2);
+        filter: brightness(1.5);
+    }
+}
+
+@keyframes s-special-final {
+    0%, 100% {
+        transform: scale(1) rotate(0deg);
+        filter: brightness(1);
+    }
+    25% {
+        transform: scale(1.3) rotate(90deg);
+        filter: brightness(1.8);
+    }
+    50% {
+        transform: scale(1.1) rotate(180deg);
+        filter: brightness(1.4);
+    }
+    75% {
+        transform: scale(1.4) rotate(270deg);
+        filter: brightness(1.6);
+    }
+}
+
+@keyframes overlay-pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.4;
+    }
+}
+
+@keyframes grid-line-appear {
+    0%, 100% {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    50% {
+        opacity: 0.6;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes grid-dot-pulse {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(2);
+    }
+}
+
+/* When animations are disabled */
+.mk-anitus-intro-no-animate {
+    .mk-anitus-intro-parallax {
+        transform: none !important;
+        opacity: 1 !important;
+        transition: none !important;
+        
+        .letter-svg {
+            animation: none !important;
+            filter: drop-shadow(0 0 15px rgba($themeColor4, 0.5)) !important;
+            
+            .letter-path {
+                stroke: $themeColor3 !important;
+                stroke-dashoffset: 0 !important;
+                animation: none !important;
+                opacity: 1 !important;
+            }
+            
+            .letter-accent {
+                fill: $themeColor4 !important;
+                opacity: 1 !important;
+                transform: scale(1) !important;
+                animation: none !important;
+            }
+            
+            &.letter-s-special {
+                .s-path {
+                    stroke: $themeColor3 !important;
+                }
+                .s-accent-1, .s-accent-2, .s-accent-3 {
+                    fill: $themeColor4 !important;
+                    opacity: 1 !important;
+                }
+            }
+        }
+    }
+    
+    .modern-background-grid {
+        opacity: 1 !important;
+        
+        .grid-line, .grid-dot {
+            opacity: 0.3 !important;
+            animation: none !important;
+        }
+    }
+    
+    .modern-glow-overlay {
+        transform: translate(-50%, -50%) scale(1) !important;
+        opacity: 0.5 !important;
+        transition: none !important;
+    }
+}
+
+// Emergency fallback - force visibility
+.mk-anitus-intro-modern {
+    // Force visible state for debugging
+    &.mk-anitus-intro-visible .mk-anitus-intro-parallax {
+        opacity: 1 !important;
+        transform: translateY(0) rotateX(0deg) scale(1) !important;
+        
+        .letter-svg {
+            .letter-path {
+                stroke-dashoffset: 0 !important;
+                opacity: 1 !important;
+            }
+            .letter-accent {
+                opacity: 1 !important;
+                transform: scale(1) !important;
+            }
+        }
+    }
+}
+
+// Responsive design for modern layout
+@media only screen and (max-width: 768px) {
+    .mk-anitus-intro-modern {
+        .letters-container {
+            gap: 8px;
+        }
+        
+        .mk-anitus-intro-parallax {
+            width: 70px;
+            height: 70px;
+        }
+        
+        .modern-glow-overlay {
+            width: 200px;
+            height: 200px;
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .mk-anitus-intro-modern {
+        .letters-container {
+            gap: 5px;
+        }
+        
+        .mk-anitus-intro-parallax {
+            width: 55px;
+            height: 55px;
+        }
+        
+        .modern-glow-overlay {
+            width: 150px;
+            height: 150px;
+        }
+    }
+}

@@ -21,8 +21,9 @@
         text-align: center;
 
         .mk-contact-box-width {
-            max-width: 600px;
-            padding: 100px 0 20px 0;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 100px 20px 60px 20px;
         }
 
         .mk-contact-label {
@@ -52,8 +53,134 @@
         }
     }
 
+    // Contact Form Styles
+    .mk-contact-form {
+        margin-top: 40px;
+        text-align: left;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .mk-form-group {
+            margin-bottom: 20px;
+        }
+
+        .mk-form-label {
+            display: block;
+            margin-bottom: 8px;
+            color: $themeColor3;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .mk-form-input,
+        .mk-form-textarea {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid rgba($themeColor3, 0.2);
+            border-radius: 8px;
+            background-color: rgba($themeColor3, 0.05);
+            color: $themeColor3;
+            font-size: 16px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+
+            &:focus {
+                outline: none;
+                border-color: $themeColor4;
+                background-color: rgba($themeColor4, 0.1);
+            }
+
+            &::placeholder {
+                color: rgba($themeColor3, 0.6);
+            }
+
+            &.error {
+                border-color: #e74c3c;
+                background-color: rgba(231, 76, 60, 0.05);
+            }
+        }
+
+        .mk-form-error {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 5px;
+            font-weight: 500;
+        }
+
+        .mk-form-note {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: rgba($themeColor4, 0.1);
+            border-radius: 8px;
+            border-left: 4px solid $themeColor4;
+
+            p {
+                margin: 0;
+                color: $themeColor3;
+                font-size: 14px;
+                
+                strong {
+                    color: $themeColor4;
+                }
+            }
+        }
+
+        .mk-form-textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .mk-form-submit {
+            width: 100%;
+            margin-top: 10px;
+
+            &:disabled {
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+        }
+
+        .mk-form-status {
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            text-align: center;
+            font-weight: 500;
+
+            &.success {
+                background-color: rgba(46, 204, 113, 0.1);
+                border: 1px solid rgba(46, 204, 113, 0.3);
+                color: #2ecc71;
+                
+                p {
+                    margin: 5px 0;
+                    
+                    strong {
+                        color: #27ae60;
+                    }
+                }
+            }
+
+            &.error {
+                background-color: rgba(231, 76, 60, 0.1);
+                border: 1px solid rgba(231, 76, 60, 0.3);
+                color: #e74c3c;
+            }
+        }
+    }
+
+
+
+    .mk-contact-footer {
+        margin-top: 50px;
+        text-align: center;
+        padding: 40px 0;
+        border-top: 1px solid rgba($themeColor3, 0.1);
+    }
+
     .mk-contact-git-section {
-        margin-top: 130px;
+        margin-top: 30px;
         font-size: 14px;
         color: $themeColor3;
         line-height: 1.5;
@@ -70,11 +197,26 @@
         }
 
         &:hover {
-        color: $themeColor4;
+            color: $themeColor4;
 
-        svg {
-            stroke: $themeColor4;
+            svg {
+                stroke: $themeColor4;
+            }
         }
+    }
+
+    // Responsive Design
+    @media (max-width: 768px) {
+        .mk-contact-box-width {
+            padding: 60px 15px 40px 15px;
+        }
+
+        .mk-contact-form {
+            .mk-form-input,
+            .mk-form-textarea {
+                padding: 12px 15px;
+                font-size: 14px;
+            }
         }
     }
 

@@ -1,57 +1,26 @@
 const projects = {
-    heading: `Things I've Worked on`,
+    heading: `Things I've Worked on, Some of Them`,
     list: [
         {
-            image: '/assets/projects/PIAIC.png',
-            label: 'Featured Project',
-            title: 'PIAIC Web/Portal',
-            description: 'The mission of PIAIC is to reshape Pakistan by revolutionizing education, research, and business by adopting latest, cutting-edge technologies.',
+            image: '/assets/projects/discord-bot.png',
+            label: 'Automation',
+            title: 'Discord Bot',
+            description: 'Designed and deployed a custom Discord bot to automate server interactions and enhance community engagement. This bot handles tasks like welcoming new members, moderating content, and responding to user commands with real-time data. Built using JavaScript and Discord.js, it features modular command handling, role assignment, and API integration for dynamic responses.',
             techs: [
-                'React Js',
-                'Express Js',
-                'Mongodb',
+                'JavaScript',
+                'Discord.js',
+                'Node.js',
             ]
         },
         {
-            image: '/assets/projects/digitalplattform.png',
+            image: '/assets/projects/cms.png',
             label: 'Featured Project',
-            title: 'Digital Plattform',
-            description: 'A Platform that offers everything from marketing strategy and solving technical challenges to content creation for social media',
+            title: 'CMS - Classroom Management System',
+            description: 'A comprehensive platform for managing classroom activities, assignments, and student interactions. This system streamlines communication between teachers and students, facilitates assignment submissions, and provides a centralized hub for educational resources. Built with a focus on user experience and accessibility.',
             techs: [
-                'React Js',
-                'Express Js',
-                'GraphQl/Apollo',
-                'Mongodb',
-            ]
-        },
-        {
-            image: '/assets/projects/declinica.png',
-            label: 'Featured Project',
-            title: 'Declinica',
-            description: 'A Decentralised blockchain Designed for the medical community.',
-            techs: [
-                'React Js',
-                'Web3 Js',
-            ]
-        },
-        {
-            image: '/assets/projects/rolazdoro.png',
-            label: 'Featured Project',
-            title: `Rolaz D'oro`,
-            description: `One of the main objective of Rolaz D'ORO is to make gold easily accessible to even small investors in a trusted and secure environment, with the peace of mind that their investments are traceable and could be claimed at any stated time.`,
-            techs: [
-                'React Js',
-                'Web3 Js',
-            ]
-        },
-        {
-            image: '/assets/projects/chainracers.png',
-            label: 'Featured Project',
-            title: `Chainracers`,
-            description: `ChainRacers is a play-to-earn NFT Race Battle Game. The GammaVerse, our growing MetaVerse featuring characters, worlds, arenas, and more, will kick things off with 8,888 unique generative NFT sets. Each set will include a NFT Racer and NFT Rider.`,
-            techs: [
-                'React Js',
-                'Web3 Js',
+                'React',
+                'Node.js',
+                'MongoDB',
             ]
         }
     ]

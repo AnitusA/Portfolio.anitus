@@ -1,52 +1,25 @@
 import { openLink } from "./methods"
 
 const certifications = {
-    heading:  `Licenses & certifications`,
+    heading:  `My Professional Certifications`,
     list: [
         {
             size: 1,
-            title: 'DevOps on AWS Specialization',
-            platform: 'Coursera',
-            link: 'https://www.coursera.org/account/accomplishments/specialization/certificate/YERB6BVPD2YS',
-            date: 'Issued Sep 2022 · No Expiration Date',
-            logo: '/assets/aws.png',
-            aos: 'zoom-out-left'
-        },
-        {
-            size: 1,
-            title: 'Docker for absolute beginners',
-            platform: 'Coursera',
-            link: 'https://www.coursera.org/account/accomplishments/certificate/BT5THPADCSJN',
-            date: 'Issued Sep 2022 · No Expiration Date',
-            logo: '/assets/docker.png',
-            aos: 'zoom-out-right'
-        },
-        {
-            size: 1,
-            title: 'AWS Cloud Technical Essentials',
-            platform: 'Coursera',
-            link: 'https://www.coursera.org/account/accomplishments/certificate/24NSC9PMXLGT',
-            date: 'Issued Aug 2022 · No Expiration Date',
-            logo: '/assets/aws.png',
-            aos: 'zoom-out-left'
-        },
-        {
-            size: 1,
-            title: 'Certified Mobile and Web App Developer',
-            platform: 'SMIT | Saylani Mass IT Training',
+            title: 'Python Course for Beginners',
+            platform: 'Scaler Topics',
             link: '',
-            date: 'Issued Feb 2019 · No Expiration DateIssued',
-            logo: '/assets/smit.png',
-            aos: 'zoom-out-right'
+            date: 'Issued Feb 2025 · No Expiration Date',
+            logo: '/assets/python.png',
+            aos: 'zoom-out-left'
         },
         {
             size: 2,
-            title: 'Hackathon on creating OLX App using PWA Development',
-            platform: 'SMIT | Saylani Mass IT Training',
+            title: 'Career Essentials in Software Development by Microsoft and LinkedIn',
+            platform: 'LinkedIn Learning',
             link: '',
-            date: 'Issued Jul 2018 · No Expiration Date',
-            logo: '/assets/smit.png',
-            aos: 'zoom-out-left'
+            date: 'Issued Apr 2025 · No Expiration Date',
+            logo: '/assets/linkedin.png',
+            aos: 'zoom-out-right'
         },
     ],
     handleIconClick: openLink

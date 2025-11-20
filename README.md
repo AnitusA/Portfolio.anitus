@@ -1,8 +1,8 @@
 <h1 align="center">
-    Muneeb Khan - Portfolio
+    Anitus A - Software Engineer Portfolio
 </h1>
 <p align="center">
-  This personal portfolio website is developed by using <a href="https://www.netlify.com/" target="_blank">Next.js</a>.
+  A methodical full-stack engineer with a passion for clean logic, reusable code, and real-world impact. Built with <a href="https://nextjs.org/" target="_blank">Next.js</a>.
 </p>
 <p align="center">
   Check Demo:

@@ -55,21 +55,8 @@ const MySelf = ({ data: {
                         text={heading}
                     />
                     <div className='row justify-content-center'>
-                        <div className='col-12 col-md-8'>
-                            <div className=''>
-                                {(paragraphs || []).map((text, i) => (
-                                    <Paragraph
-                                        key={i}
-                                        text={text}
-                                    />
-                                ))}
-                                <ListParent
-                                    list1={techList1}
-                                    list2={techList2}
-                                />
-                            </div>
-                        </div>
-                        <div className='col-12 col-md-4 mt-5 mt-md-0'>
+                        {/* Image - Shows first on mobile, second on desktop */}
+                        <div className='col-12 col-md-4 order-1 order-md-2 mb-4 mb-md-0'>
                             <div
                                 data-aos="zoom-in-right"
                                 className='mk-myself-profile-wrapper d-flex justify-content-center'>
@@ -80,6 +67,21 @@ const MySelf = ({ data: {
                                     parentClassName='mk-myself-profile-parent'
                                     src={image}
                                 // layout="fill"
+                                />
+                            </div>
+                        </div>
+                        {/* Content - Shows second on mobile, first on desktop */}
+                        <div className='col-12 col-md-8 order-2 order-md-1'>
+                            <div className=''>
+                                {(paragraphs || []).map((text, i) => (
+                                    <Paragraph
+                                        key={i}
+                                        text={text}
+                                    />
+                                ))}
+                                <ListParent
+                                    list1={techList1}
+                                    list2={techList2}
                                 />
                             </div>
                         </div>
