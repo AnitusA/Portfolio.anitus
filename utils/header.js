@@ -14,7 +14,7 @@ const header = {
     ],
     rightBtn: {
         label: 'Curriculum Vitae | CV',
-        onClick: () => openLink('https://drive.google.com/file/d/1G42PghAF-i9Y8hq5LdpG_0DEbMC79-Dv/view?usp=sharing')
+        onClick: () => openLink('https://drive.google.com/file/d/1S2f30VC6eltLgAp80jALUGq5SPo4jdpR/view?usp=drivesdk')
     },
     logo: {
         src: '/assets/profile2.png',
