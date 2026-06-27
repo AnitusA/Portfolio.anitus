@@ -33,7 +33,12 @@ function MyApp({ Component, pageProps }) {
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap.bundle");
     import("aos/dist/aos.js");
-    AOS.init();
+    AOS.init({
+      once: true,
+      offset: 100,
+      duration: 600,
+      easing: 'ease-out-cubic',
+    });
   }, [])
   return (
     <>
