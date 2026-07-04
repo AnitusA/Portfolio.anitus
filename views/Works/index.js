@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import ViewsTitle from '../../components/ViewsTitle'
 import Helm from '../../components/SVGs/Helm'
 
-const TimelineItem = ({ item, index }) => (
+const TimelineItem = ({ item, index }) => {
+  return (
     <div
       className='mk-timeline-item'
       data-aos='fade-up'
@@ -16,12 +17,13 @@ const TimelineItem = ({ item, index }) => (
       <div className='mk-timeline-duration'>{item.duration}</div>
       <div className='mk-timeline-points'>
         {(item.points || []).map((text, i) => (
-          <div key={i} className='mk-timeline-point'>{text}</div>
+          <div key={i} className='mk-timeline-point' data-aos='fade-up' data-aos-delay={index * 80 + i * 60}>{text}</div>
         ))}
       </div>
     </div>
   </div>
-)
+  )
+}
 
 const Works = ({ data: { heading, experiences } }) => {
   const sectionRef = useRef(null)

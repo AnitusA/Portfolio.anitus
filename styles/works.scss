@@ -22,6 +22,10 @@
       opacity: 0.15;
       display: block;
     }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   .mk-works-container {
@@ -29,6 +33,10 @@
     max-width: 800px;
     padding: 100px 0;
     margin: auto;
+
+    @media (max-width: 768px) {
+      padding: 60px 16px;
+    }
   }
 
   .mk-timeline {
@@ -52,13 +60,8 @@
       margin-bottom: 50px;
 
       &[data-aos='fade-up'] {
-        transform: scale(0.85) translateY(40px);
-        opacity: 0;
-        transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.6s ease;
-
-        &.aos-animate {
-          transform: scale(1) translateY(0);
-          opacity: 1;
+        .mk-timeline-dot {
+          animation: mk-dot-pulse 2s ease-in-out infinite;
         }
       }
 
@@ -106,6 +109,48 @@
 
     .mk-timeline-item:hover .mk-timeline-dot {
       box-shadow: 0 0 0 3px $themeColor4, 0 0 20px rgba($themeColor4, 0.7);
+    }
+
+    @media (max-width: 768px) {
+      .mk-timeline-line {
+        left: 30px;
+      }
+
+      .mk-timeline-item {
+        flex-direction: row !important;
+        padding-left: 60px;
+        margin-bottom: 40px;
+
+        &:nth-child(odd),
+        &:nth-child(even) {
+          .mk-timeline-card {
+            width: 100%;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+          }
+
+          .mk-timeline-dot {
+            left: 30px;
+            transform: translateX(-50%);
+          }
+        }
+      }
+
+      .mk-timeline-card {
+        padding: 16px 18px;
+
+        .mk-timeline-role {
+          font-size: 17px;
+        }
+
+        .mk-timeline-duration {
+          font-size: 12px;
+        }
+
+        .mk-timeline-point {
+          font-size: 13px;
+        }
+      }
     }
 
     .mk-timeline-card {
@@ -158,5 +203,16 @@
         }
       }
     }
+  }
+}
+
+@keyframes mk-dot-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 3px $themeColor4, 0 0 12px rgba($themeColor4, 0.4);
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba($themeColor4, 0.3), 0 0 24px rgba($themeColor4, 0.6);
+    transform: translateX(-50%) scale(1.2);
   }
 }
